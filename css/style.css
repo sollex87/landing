@@ -178,6 +178,9 @@ body {
         line-height: 28px;
         text-transform: uppercase;
         letter-spacing: 1.2px; }
+        @media screen and (max-width: 900px) {
+          .aboutContent__text h3 {
+            text-align: center; } }
       .aboutContent__text p {
         margin: 20px 0 20px 0;
         opacity: 0.74;
