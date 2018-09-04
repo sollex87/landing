@@ -7,16 +7,81 @@ body{
   font-family: 'Montserrat', sans-serif;
 }
 
+h2{
+  font-size: 30px;
+  line-height: 45px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+h2 + p{
+  opacity: 0.62;
+  color: #000000;
+  font-family: 'Merriweather', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  text-transform: uppercase;
+  letter-spacing: 1.08px;
+  text-align: center;
+}
+
+h3{
+  opacity: 0.75;
+  color: #000000;
+  font-family: 'Merriweather', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+}
+
+h3 + p{
+  margin: 20px 0 20px 0;
+  opacity: 0.74;
+  color: #000000;
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0.8px;
+  text-transform: none;
+}
+
+.block{
+  padding: 130px 5vw 125px 5vw;
+}
+
+.container{
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  margin-top: 120px;
+  @media screen and (max-width: 600px) {
+    margin-top: 20px;
+  }
+  & img{
+    margin: 7px;
+    //@media screen and (max-width: 400px){
+    //  width: 90vw;
+    //  height: 105vw;
+    //}
+  }
+}
+
 .wrapper{
   max-width: 1440px;
   margin: 0 auto;
 }
 
 .header{
-  padding: 65px 5vw 0 5vw;
   background: #eff0f2;
   position: relative;
   text-align: center;
+  padding: 65px 5vw 0 5vw;
   .logo{
     display: flex;
     justify-content: space-between;
@@ -81,8 +146,8 @@ body{
     text-transform: uppercase;
     letter-spacing: 2.16px;
     text-decoration: none;
-    margin-bottom: 196px;
     transition: 0.2s ease-in-out;
+    margin-bottom: 200px;
     &:hover{
       background: black;
       color: white;
@@ -97,25 +162,9 @@ body{
 
 .about{
   text-align: center;
-  padding: 130px 5vw 80px 5vw;
   background-color: #f8fafa;
   @media screen and (max-width: 600px) {
-    padding: 50px 5vw 50px 5vw;
-    font-size: 14px;
-  }
-  & h2{
-    font-size: 30px;
-    line-height: 45px;
-  }
-  & p{
-    opacity: 0.62;
-    color: #000000;
-    font-family: 'Merriweather', sans-serif;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 28px;
-    text-transform: uppercase;
-    letter-spacing: 1.08px;
+    padding: 50px 5vw 20px 5vw;
   }
   &Content{
     display: flex;
@@ -193,31 +242,124 @@ body{
         width: 80vw;
       }
       & h3{
-        opacity: 0.75;
-        color: #000000;
-        font-family: 'Merriweather', sans-serif;
-        font-size: 20px;
-        font-weight: 700;
-        line-height: 28px;
-        text-transform: uppercase;
-        letter-spacing: 1.2px;
         @media screen and (max-width: 900px) {
           text-align: center;
         }
       }
       & p{
-        margin: 20px 0 20px 0;
-        opacity: 0.74;
-        color: #000000;
-        font-family: 'Raleway', sans-serif;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 28px;
-        letter-spacing: 0.8px;
-        text-transform: none;
         @media screen and (max-width: 900px) {
           text-align: justify;
         }
+      }
+    }
+  }
+}
+
+.works{
+  @media screen and (max-width: 600px) {
+    padding: 50px 5vw 50px 5vw;
+  }
+  &Container{
+    img{
+      transition: 0.1s ease-in-out;
+      &:hover{
+        transform: scale(1.03);
+        box-shadow: #c4c2c1 0 0 25px;
+      }
+      &:active{
+        transform: scale(0.97);
+        box-shadow: none;
+      }
+      //@media screen and (max-width: 400px){
+      //  width: 90vw;
+      //}
+    }
+  }
+}
+
+.services{
+  background-color: #f9fbfb;
+  @media screen and (max-width: 600px) {
+    padding: 50px 5vw 50px 5vw;
+  }
+  &Container{
+    &Item{
+      position: relative;
+      &__text{
+        display: inline-block;
+        position: absolute;
+        height: calc(100% - 18px - 120px);
+        width: calc(100% - 15px - 120px);
+        left: 7px;
+        top: 7px;
+        background-color: rgba(0,0,0,0.6);
+        padding: 60px;
+        color: white;
+        &:hover{
+          background-color: #6df6eb;
+          color: black;
+        }
+        h3, p, a{
+          color: inherit;
+          opacity: 1;
+          text-decoration: none;
+        }
+        &:hover a{
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.team{
+  @media screen and (max-width: 600px) {
+    padding: 50px 5vw 50px 5vw;
+  }
+  &Container{
+    &Item{
+      display: flex;
+      position: relative;
+      &__tail{
+        display: none;
+        width: 50px;
+        height: 50px;
+        background-color: #6df6eb;
+        position: absolute;
+        left: 40px;
+        transform: rotate(45deg);
+        bottom: 250px;
+      }
+      &__text{
+        display: none;
+        position: absolute;
+        padding: 40px;
+        height: 45%;
+        width: 70%;
+        bottom: 15px;
+        left: 15px;
+        background-color: #6df6eb;
+        box-shadow: 10px 10px 16px rgba(20, 20, 21, 0.18);
+        & span{
+          font-style: italic;
+          font-size: 14px;
+          text-transform: none;
+          color: #767070;
+        }
+      }
+      &__social{
+        display: flex;
+        position: absolute;
+        bottom: 40px;
+        & i{
+          margin: 8px;
+        }
+      }
+      &:hover{
+        transform: scale(1.02);
+      }
+      &:hover .teamContainerItem__text, &:hover .teamContainerItem__tail{
+        display: block;
       }
     }
   }
