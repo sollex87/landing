@@ -5,15 +5,69 @@
 body {
   font-family: 'Montserrat', sans-serif; }
 
+h2 {
+  font-size: 30px;
+  line-height: 45px;
+  text-transform: uppercase;
+  text-align: center; }
+
+h2 + p {
+  opacity: 0.62;
+  color: #000000;
+  font-family: 'Merriweather', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  text-transform: uppercase;
+  letter-spacing: 1.08px;
+  text-align: center; }
+
+h3 {
+  opacity: 0.75;
+  color: #000000;
+  font-family: 'Merriweather', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px; }
+
+h3 + p {
+  margin: 20px 0 20px 0;
+  opacity: 0.74;
+  color: #000000;
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0.8px;
+  text-transform: none; }
+
+.block {
+  padding: 130px 5vw 125px 5vw; }
+
+.container {
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  margin-top: 120px; }
+  @media screen and (max-width: 600px) {
+    .container {
+      margin-top: 20px; } }
+  .container img {
+    margin: 7px; }
+
 .wrapper {
   max-width: 1440px;
   margin: 0 auto; }
 
 .header {
-  padding: 65px 5vw 0 5vw;
   background: #eff0f2;
   position: relative;
-  text-align: center; }
+  text-align: center;
+  padding: 65px 5vw 0 5vw; }
   .header .logo {
     display: flex;
     justify-content: space-between;
@@ -71,8 +125,8 @@ body {
     text-transform: uppercase;
     letter-spacing: 2.16px;
     text-decoration: none;
-    margin-bottom: 196px;
-    transition: 0.2s ease-in-out; }
+    transition: 0.2s ease-in-out;
+    margin-bottom: 200px; }
     .header__contactBtn:hover {
       background: black;
       color: white; }
@@ -83,24 +137,10 @@ body {
 
 .about {
   text-align: center;
-  padding: 130px 5vw 80px 5vw;
   background-color: #f8fafa; }
   @media screen and (max-width: 600px) {
     .about {
-      padding: 50px 5vw 50px 5vw;
-      font-size: 14px; } }
-  .about h2 {
-    font-size: 30px;
-    line-height: 45px; }
-  .about p {
-    opacity: 0.62;
-    color: #000000;
-    font-family: 'Merriweather', sans-serif;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 28px;
-    text-transform: uppercase;
-    letter-spacing: 1.08px; }
+      padding: 50px 5vw 20px 5vw; } }
   .aboutContent {
     display: flex;
     justify-content: space-around;
@@ -169,28 +209,91 @@ body {
         .aboutContent__text {
           margin-top: 150px;
           width: 80vw; } }
-      .aboutContent__text h3 {
-        opacity: 0.75;
-        color: #000000;
-        font-family: 'Merriweather', sans-serif;
-        font-size: 20px;
-        font-weight: 700;
-        line-height: 28px;
-        text-transform: uppercase;
-        letter-spacing: 1.2px; }
-        @media screen and (max-width: 900px) {
-          .aboutContent__text h3 {
-            text-align: center; } }
-      .aboutContent__text p {
-        margin: 20px 0 20px 0;
-        opacity: 0.74;
-        color: #000000;
-        font-family: 'Raleway', sans-serif;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 28px;
-        letter-spacing: 0.8px;
-        text-transform: none; }
-        @media screen and (max-width: 900px) {
-          .aboutContent__text p {
-            text-align: justify; } }
+      @media screen and (max-width: 900px) {
+        .aboutContent__text h3 {
+          text-align: center; } }
+      @media screen and (max-width: 900px) {
+        .aboutContent__text p {
+          text-align: justify; } }
+
+@media screen and (max-width: 600px) {
+  .works {
+    padding: 50px 5vw 50px 5vw; } }
+
+.worksContainer img {
+  transition: 0.1s ease-in-out; }
+  .worksContainer img:hover {
+    transform: scale(1.03);
+    box-shadow: #c4c2c1 0 0 25px; }
+  .worksContainer img:active {
+    transform: scale(0.97);
+    box-shadow: none; }
+
+.services {
+  background-color: #f9fbfb; }
+  @media screen and (max-width: 600px) {
+    .services {
+      padding: 50px 5vw 50px 5vw; } }
+  .servicesContainerItem {
+    position: relative; }
+    .servicesContainerItem__text {
+      display: inline-block;
+      position: absolute;
+      height: calc(100% - 18px - 120px);
+      width: calc(100% - 15px - 120px);
+      left: 7px;
+      top: 7px;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 60px;
+      color: white; }
+      .servicesContainerItem__text:hover {
+        background-color: #6df6eb;
+        color: black; }
+      .servicesContainerItem__text h3, .servicesContainerItem__text p, .servicesContainerItem__text a {
+        color: inherit;
+        opacity: 1;
+        text-decoration: none; }
+      .servicesContainerItem__text:hover a {
+        display: none; }
+
+@media screen and (max-width: 600px) {
+  .team {
+    padding: 50px 5vw 50px 5vw; } }
+
+.teamContainerItem {
+  display: flex;
+  position: relative; }
+  .teamContainerItem__tail {
+    display: none;
+    width: 50px;
+    height: 50px;
+    background-color: #6df6eb;
+    position: absolute;
+    left: 40px;
+    transform: rotate(45deg);
+    bottom: 250px; }
+  .teamContainerItem__text {
+    display: none;
+    position: absolute;
+    padding: 40px;
+    height: 45%;
+    width: 70%;
+    bottom: 15px;
+    left: 15px;
+    background-color: #6df6eb;
+    box-shadow: 10px 10px 16px rgba(20, 20, 21, 0.18); }
+    .teamContainerItem__text span {
+      font-style: italic;
+      font-size: 14px;
+      text-transform: none;
+      color: #767070; }
+  .teamContainerItem__social {
+    display: flex;
+    position: absolute;
+    bottom: 40px; }
+    .teamContainerItem__social i {
+      margin: 8px; }
+  .teamContainerItem:hover {
+    transform: scale(1.02); }
+  .teamContainerItem:hover .teamContainerItem__text, .teamContainerItem:hover .teamContainerItem__tail {
+    display: block; }
