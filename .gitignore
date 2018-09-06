@@ -1,1 +1,6 @@
 #Trying to use .gitignore
+node_modules
+.idea
+package.json
+package-lock.json
+gulpfile.js
