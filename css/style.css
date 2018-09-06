@@ -141,7 +141,7 @@ h3 + p {
     .header .logo .burgerToggle:checked ~ label .logo__burger div:first-child {
       transform: rotate(-45deg) translate(0, 14px); }
     .header .logo .burgerToggle:checked ~ label .logo__burger div:nth-child(2) {
-      transform: translate(50px);
+      transform: translate(-50px);
       opacity: 0; }
     .header .logo .burgerToggle:checked ~ label .logo__burger div:last-child {
       transform: rotate(45deg) translate(0, -14px); }
