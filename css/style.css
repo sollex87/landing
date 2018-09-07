@@ -52,7 +52,7 @@ h3 + p {
   text-transform: none; }
 
 .block {
-  padding: 130px 5vw 50px 5vw; }
+  padding: 130px 5vw 120px 5vw; }
 
 .container {
   max-width: 1200px;
@@ -196,7 +196,7 @@ h3 + p {
 
 .about {
   text-align: center;
-  background-color: #f8fafa; }
+  background-color: #f5f5f5; }
   @media screen and (max-width: 600px) {
     .about {
       padding: 50px 5vw 50px 5vw; } }
@@ -218,22 +218,26 @@ h3 + p {
         .aboutContent__img {
           margin: 0; } }
       .aboutContent__img #aboutCheckboxImg1:checked ~ .aboutSliderImg1 {
-        opacity: 1; }
+        opacity: 1;
+        z-index: 5; }
       .aboutContent__img #aboutCheckboxImg1:checked ~ label[for~=aboutCheckboxImg1] .dots__item {
         transform: scale(1.3);
         background: #77efe5; }
       .aboutContent__img #aboutCheckboxImg2:checked ~ .aboutSliderImg2 {
-        opacity: 1; }
+        opacity: 1;
+        z-index: 5; }
       .aboutContent__img #aboutCheckboxImg2:checked ~ label[for~=aboutCheckboxImg2] .dots__item {
         transform: scale(1.3);
         background: #77efe5; }
       .aboutContent__img #aboutCheckboxImg3:checked ~ .aboutSliderImg3 {
-        opacity: 1; }
+        opacity: 1;
+        z-index: 5; }
       .aboutContent__img #aboutCheckboxImg3:checked ~ label[for~=aboutCheckboxImg3] .dots__item {
         transform: scale(1.3);
         background: #77efe5; }
       .aboutContent__img #aboutCheckboxImg4:checked ~ .aboutSliderImg4 {
-        opacity: 1; }
+        opacity: 1;
+        z-index: 5; }
       .aboutContent__img #aboutCheckboxImg4:checked ~ label[for~=aboutCheckboxImg4] .dots__item {
         transform: scale(1.3);
         background: #77efe5; }
@@ -314,7 +318,7 @@ h3 + p {
       height: 100%; } }
 
 .services {
-  background-color: #f9fbfb; }
+  background-color: #f5f5f5; }
   @media screen and (max-width: 600px) {
     .services {
       padding: 50px 5vw 50px 5vw; } }
@@ -430,7 +434,7 @@ h3 + p {
     display: block; }
 
 .feedback {
-  background-color: #f9fbfb;
+  background-color: #f5f5f5;
   text-align: center;
   position: relative; }
   .feedback input {
@@ -439,7 +443,8 @@ h3 + p {
     position: relative;
     transform: translate(0);
     top: 0;
-    opacity: 1; }
+    opacity: 1;
+    z-index: 5; }
   .feedback #feedbackCheckboxImg1:checked ~ label[for~=feedbackCheckboxImg1] .dots__item {
     transform: scale(1.3);
     background: #77efe5; }
@@ -447,7 +452,8 @@ h3 + p {
     position: relative;
     transform: translate(0);
     top: 0;
-    opacity: 1; }
+    opacity: 1;
+    z-index: 5; }
   .feedback #feedbackCheckboxImg2:checked ~ label[for~=feedbackCheckboxImg2] .dots__item {
     transform: scale(1.3);
     background: #77efe5; }
@@ -455,7 +461,8 @@ h3 + p {
     position: relative;
     transform: translate(0);
     top: 0;
-    opacity: 1; }
+    opacity: 1;
+    z-index: 5; }
   .feedback #feedbackCheckboxImg3:checked ~ label[for~=feedbackCheckboxImg3] .dots__item {
     transform: scale(1.3);
     background: #77efe5; }
@@ -463,7 +470,8 @@ h3 + p {
     position: relative;
     transform: translate(0);
     top: 0;
-    opacity: 1; }
+    opacity: 1;
+    z-index: 5; }
   .feedback #feedbackCheckboxImg4:checked ~ label[for~=feedbackCheckboxImg4] .dots__item {
     transform: scale(1.3);
     background: #77efe5; }
