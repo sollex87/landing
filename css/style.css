@@ -102,7 +102,8 @@ h3 + p {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      height: 25px; }
+      height: 25px;
+      cursor: pointer; }
       .header .logo__burger div {
         width: 30px;
         height: 5px;
@@ -141,7 +142,7 @@ h3 + p {
     .header .logo .burgerToggle:checked ~ label .logo__burger div:first-child {
       transform: rotate(-45deg) translate(0, 14px); }
     .header .logo .burgerToggle:checked ~ label .logo__burger div:nth-child(2) {
-      transform: translate(-50px);
+      transform: translate(5px);
       opacity: 0; }
     .header .logo .burgerToggle:checked ~ label .logo__burger div:last-child {
       transform: rotate(45deg) translate(0, -14px); }
@@ -209,22 +210,22 @@ h3 + p {
         .aboutContent__img {
           margin: 0; } }
       .aboutContent__img #checkboxImg1:checked ~ .sliderImg1 {
-        z-index: 5; }
+        opacity: 1; }
       .aboutContent__img #checkboxImg1:checked ~ label[for~=checkboxImg1] .dots__item {
         transform: scale(1.3);
         background: #77efe5; }
       .aboutContent__img #checkboxImg2:checked ~ .sliderImg2 {
-        z-index: 5; }
+        opacity: 1; }
       .aboutContent__img #checkboxImg2:checked ~ label[for~=checkboxImg2] .dots__item {
         transform: scale(1.3);
         background: #77efe5; }
       .aboutContent__img #checkboxImg3:checked ~ .sliderImg3 {
-        z-index: 5; }
+        opacity: 1; }
       .aboutContent__img #checkboxImg3:checked ~ label[for~=checkboxImg3] .dots__item {
         transform: scale(1.3);
         background: #77efe5; }
       .aboutContent__img #checkboxImg4:checked ~ .sliderImg4 {
-        z-index: 5; }
+        opacity: 1; }
       .aboutContent__img #checkboxImg4:checked ~ label[for~=checkboxImg4] .dots__item {
         transform: scale(1.3);
         background: #77efe5; }
@@ -233,6 +234,7 @@ h3 + p {
         left: 44px;
         box-shadow: 0 0 30px lightgrey;
         transition: 0.5s ease-in-out;
+        opacity: 0;
         z-index: 2; }
         .aboutContent__img img:hover {
           transform: scale(1.05); }

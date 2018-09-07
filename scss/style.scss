@@ -121,6 +121,7 @@ h3 + p{
       flex-direction: column;
       justify-content: space-between;
       height: 25px;
+      cursor: pointer;
       div{
         width: 30px;
         height: 5px;
@@ -167,7 +168,7 @@ h3 + p{
         transform: rotate(-45deg) translate(0, 14px);
       }
       div:nth-child(2){
-        transform: translate(-50px);
+        transform: translate(5px);
         opacity: 0;
       }
       div:last-child{
@@ -246,28 +247,28 @@ h3 + p{
         margin: 0;
       }
       #checkboxImg1:checked ~ .sliderImg1{
-        z-index: 5;
+        opacity: 1;
       }
       #checkboxImg1:checked ~ label[for~=checkboxImg1] .dots__item{
         transform: scale(1.3);
         background: #77efe5;
       }
       #checkboxImg2:checked ~ .sliderImg2{
-        z-index: 5;
+        opacity: 1;
       }
       #checkboxImg2:checked ~ label[for~=checkboxImg2] .dots__item{
         transform: scale(1.3);
         background: #77efe5;
       }
       #checkboxImg3:checked ~ .sliderImg3{
-        z-index: 5;
+        opacity: 1;
       }
       #checkboxImg3:checked ~ label[for~=checkboxImg3] .dots__item{
          transform: scale(1.3);
          background: #77efe5;
        }
       #checkboxImg4:checked ~ .sliderImg4{
-        z-index: 5;
+        opacity: 1;
       }
       #checkboxImg4:checked ~ label[for~=checkboxImg4] .dots__item{
         transform: scale(1.3);
@@ -278,6 +279,7 @@ h3 + p{
         left: 44px;
         box-shadow: 0 0 30px lightgrey;
         transition: 0.5s ease-in-out;
+        opacity: 0;
         z-index: 2;
         &:hover{
           transform: scale(1.05);
