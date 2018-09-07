@@ -217,24 +217,24 @@ h3 + p {
       @media screen and (max-width: 900px) {
         .aboutContent__img {
           margin: 0; } }
-      .aboutContent__img #checkboxImg1:checked ~ .sliderImg1 {
+      .aboutContent__img #aboutCheckboxImg1:checked ~ .aboutSliderImg1 {
         opacity: 1; }
-      .aboutContent__img #checkboxImg1:checked ~ label[for~=checkboxImg1] .dots__item {
+      .aboutContent__img #aboutCheckboxImg1:checked ~ label[for~=aboutCheckboxImg1] .dots__item {
         transform: scale(1.3);
         background: #77efe5; }
-      .aboutContent__img #checkboxImg2:checked ~ .sliderImg2 {
+      .aboutContent__img #aboutCheckboxImg2:checked ~ .aboutSliderImg2 {
         opacity: 1; }
-      .aboutContent__img #checkboxImg2:checked ~ label[for~=checkboxImg2] .dots__item {
+      .aboutContent__img #aboutCheckboxImg2:checked ~ label[for~=aboutCheckboxImg2] .dots__item {
         transform: scale(1.3);
         background: #77efe5; }
-      .aboutContent__img #checkboxImg3:checked ~ .sliderImg3 {
+      .aboutContent__img #aboutCheckboxImg3:checked ~ .aboutSliderImg3 {
         opacity: 1; }
-      .aboutContent__img #checkboxImg3:checked ~ label[for~=checkboxImg3] .dots__item {
+      .aboutContent__img #aboutCheckboxImg3:checked ~ label[for~=aboutCheckboxImg3] .dots__item {
         transform: scale(1.3);
         background: #77efe5; }
-      .aboutContent__img #checkboxImg4:checked ~ .sliderImg4 {
+      .aboutContent__img #aboutCheckboxImg4:checked ~ .aboutSliderImg4 {
         opacity: 1; }
-      .aboutContent__img #checkboxImg4:checked ~ label[for~=checkboxImg4] .dots__item {
+      .aboutContent__img #aboutCheckboxImg4:checked ~ label[for~=aboutCheckboxImg4] .dots__item {
         transform: scale(1.3);
         background: #77efe5; }
       .aboutContent__img img {
@@ -273,6 +273,11 @@ h3 + p {
         .aboutContent__img .dots__item:hover {
           transform: scale(1.3);
           background: #77efe5; }
+        @media screen and (max-width: 600px) {
+          .aboutContent__img .dots__item {
+            width: 20px;
+            height: 20px;
+            margin: 80px 5px 0 5px; } }
     .aboutContent__text {
       width: 475px;
       text-align: left;
@@ -426,16 +431,58 @@ h3 + p {
 
 .feedback {
   background-color: #f9fbfb;
-  text-align: center; }
+  text-align: center;
+  position: relative; }
+  .feedback input {
+    display: none; }
+  .feedback #feedbackCheckboxImg1:checked ~ .container1 {
+    position: relative;
+    transform: translate(0);
+    top: 0;
+    opacity: 1; }
+  .feedback #feedbackCheckboxImg1:checked ~ label[for~=feedbackCheckboxImg1] .dots__item {
+    transform: scale(1.3);
+    background: #77efe5; }
+  .feedback #feedbackCheckboxImg2:checked ~ .container2 {
+    position: relative;
+    transform: translate(0);
+    top: 0;
+    opacity: 1; }
+  .feedback #feedbackCheckboxImg2:checked ~ label[for~=feedbackCheckboxImg2] .dots__item {
+    transform: scale(1.3);
+    background: #77efe5; }
+  .feedback #feedbackCheckboxImg3:checked ~ .container3 {
+    position: relative;
+    transform: translate(0);
+    top: 0;
+    opacity: 1; }
+  .feedback #feedbackCheckboxImg3:checked ~ label[for~=feedbackCheckboxImg3] .dots__item {
+    transform: scale(1.3);
+    background: #77efe5; }
+  .feedback #feedbackCheckboxImg4:checked ~ .container4 {
+    position: relative;
+    transform: translate(0);
+    top: 0;
+    opacity: 1; }
+  .feedback #feedbackCheckboxImg4:checked ~ label[for~=feedbackCheckboxImg4] .dots__item {
+    transform: scale(1.3);
+    background: #77efe5; }
   .feedbackContainer {
+    position: absolute;
     width: 100%;
+    top: 50px;
     display: flex;
     padding-top: 38px;
-    margin-top: 130px; }
+    margin-top: 130px;
+    opacity: 0;
+    transition: 0.5s ease-out; }
     @media screen and (max-width: 1000px) {
       .feedbackContainer {
         flex-direction: column;
         align-items: center; } }
+    @media screen and (max-width: 550px) {
+      .feedbackContainer {
+        margin-top: 50px; } }
     .feedbackContainer__background {
       position: relative;
       width: 450px;
@@ -453,18 +500,25 @@ h3 + p {
       position: absolute;
       top: -38px;
       left: 38px;
-      box-shadow: 0 0 30px lightgrey; }
+      box-shadow: 0 0 30px lightgrey;
+      transition: 0.2s ease-in-out; }
       @media screen and (max-width: 550px) {
         .feedbackContainer__img {
           top: -7vw;
           left: 7vw;
           width: 80%; } }
+      .feedbackContainer__img:hover {
+        transform: scale(1.02); }
     .feedbackContainer__textarea {
       box-sizing: border-box;
       background-color: #ecedef;
       height: 360px;
       width: calc(100% - 530px);
-      padding: 3vw; }
+      padding: 3vw;
+      transition: 0.2s ease-in-out;
+      max-width: 600px; }
+      .feedbackContainer__textarea:hover {
+        box-shadow: inset 0 0 30px lightgrey; }
       @media screen and (max-width: 1000px) {
         .feedbackContainer__textarea {
           width: 450px;
@@ -472,15 +526,35 @@ h3 + p {
       @media screen and (max-width: 550px) {
         .feedbackContainer__textarea {
           width: 85%;
-          padding: 0 3vw 0 3vw;
-          height: 80vw; }
+          padding: 0 5vw 0 5vw;
+          height: 60vw; }
           .feedbackContainer__textarea h3 {
             font-size: 14px; }
           .feedbackContainer__textarea p {
             font-size: 12px; } }
+      @media screen and (max-width: 460px) {
+        .feedbackContainer__textarea {
+          height: 80vw; } }
       @media screen and (max-width: 350px) {
         .feedbackContainer__textarea {
           height: 100vw; } }
+  .feedback .dots__item {
+    display: inline-block;
+    margin-top: 80px;
+    width: 10px;
+    height: 10px;
+    border-radius: 3px;
+    background-color: #d0d0d0;
+    cursor: pointer;
+    transition: 0.5s ease-in-out; }
+    .feedback .dots__item:hover {
+      transform: scale(1.3);
+      background: #77efe5; }
+    @media screen and (max-width: 600px) {
+      .feedback .dots__item {
+        width: 20px;
+        height: 20px;
+        margin: 80px 5px 0 5px; } }
 
 .partners {
   padding-top: 50px;

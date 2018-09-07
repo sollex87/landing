@@ -255,31 +255,31 @@ h3 + p{
       @media screen and (max-width: 900px) {
         margin: 0;
       }
-      #checkboxImg1:checked ~ .sliderImg1{
+      #aboutCheckboxImg1:checked ~ .aboutSliderImg1{
         opacity: 1;
       }
-      #checkboxImg1:checked ~ label[for~=checkboxImg1] .dots__item{
+      #aboutCheckboxImg1:checked ~ label[for~=aboutCheckboxImg1] .dots__item{
         transform: scale(1.3);
         background: #77efe5;
       }
-      #checkboxImg2:checked ~ .sliderImg2{
+      #aboutCheckboxImg2:checked ~ .aboutSliderImg2{
         opacity: 1;
       }
-      #checkboxImg2:checked ~ label[for~=checkboxImg2] .dots__item{
+      #aboutCheckboxImg2:checked ~ label[for~=aboutCheckboxImg2] .dots__item{
         transform: scale(1.3);
         background: #77efe5;
       }
-      #checkboxImg3:checked ~ .sliderImg3{
+      #aboutCheckboxImg3:checked ~ .aboutSliderImg3{
         opacity: 1;
       }
-      #checkboxImg3:checked ~ label[for~=checkboxImg3] .dots__item{
+      #aboutCheckboxImg3:checked ~ label[for~=aboutCheckboxImg3] .dots__item{
          transform: scale(1.3);
          background: #77efe5;
        }
-      #checkboxImg4:checked ~ .sliderImg4{
+      #aboutCheckboxImg4:checked ~ .aboutSliderImg4{
         opacity: 1;
       }
-      #checkboxImg4:checked ~ label[for~=checkboxImg4] .dots__item{
+      #aboutCheckboxImg4:checked ~ label[for~=aboutCheckboxImg4] .dots__item{
         transform: scale(1.3);
         background: #77efe5;
       }
@@ -322,6 +322,11 @@ h3 + p{
         &:hover{
           transform: scale(1.3);
           background: #77efe5;
+        }
+        @media screen and (max-width: 600px){
+          width: 20px;
+          height: 20px;
+          margin: 80px 5px 0 5px;
         }
       }
     }
@@ -522,14 +527,65 @@ h3 + p{
 .feedback{
   background-color: #f9fbfb;
   text-align: center;
+  position: relative;
+  input{
+    display: none;
+  }
+  #feedbackCheckboxImg1:checked ~ .container1{
+    position: relative;
+    transform: translate(0);
+    top: 0;
+    opacity: 1;
+  }
+  #feedbackCheckboxImg1:checked ~ label[for~=feedbackCheckboxImg1] .dots__item{
+    transform: scale(1.3);
+    background: #77efe5;
+  }
+  #feedbackCheckboxImg2:checked ~ .container2{
+    position: relative;
+    transform: translate(0);
+    top: 0;
+    opacity: 1;
+  }
+  #feedbackCheckboxImg2:checked ~ label[for~=feedbackCheckboxImg2] .dots__item{
+    transform: scale(1.3);
+    background: #77efe5;
+  }
+  #feedbackCheckboxImg3:checked ~ .container3{
+    position: relative;
+    transform: translate(0);
+    top: 0;
+    opacity: 1;
+  }
+  #feedbackCheckboxImg3:checked ~ label[for~=feedbackCheckboxImg3] .dots__item{
+    transform: scale(1.3);
+    background: #77efe5;
+  }
+  #feedbackCheckboxImg4:checked ~ .container4{
+    position: relative;
+    transform: translate(0);
+    top: 0;
+    opacity: 1;
+  }
+  #feedbackCheckboxImg4:checked ~ label[for~=feedbackCheckboxImg4] .dots__item{
+    transform: scale(1.3);
+    background: #77efe5;
+  }
   &Container{
+    position: absolute;
     width: 100%;
+    top: 50px;
     display: flex;
     padding-top: 38px;
     margin-top: 130px;
+    opacity: 0;
+    transition: 0.5s ease-out;
     @media screen and (max-width: 1000px){
       flex-direction: column;
       align-items: center;
+    }
+    @media screen and (max-width: 550px){
+      margin-top: 50px;
     }
     &__background{
       position: relative;
@@ -550,10 +606,14 @@ h3 + p{
       top: -38px;
       left: 38px;
       box-shadow: 0 0 30px lightgrey;
+      transition: 0.2s ease-in-out;
       @media screen and (max-width: 550px){
         top: -7vw;
         left: 7vw;
         width: 80%;
+      }
+      &:hover{
+        transform: scale(1.02);
       }
     }
     &__textarea{
@@ -562,14 +622,19 @@ h3 + p{
       height: 360px;
       width: calc(100% - 530px);
       padding: 3vw;
+      transition: 0.2s ease-in-out;
+      max-width: 600px;
+      &:hover{
+        box-shadow: inset 0 0 30px lightgrey;
+      }
       @media screen and (max-width: 1000px){
         width: 450px;
         padding: 80px 38px 0 38px;
       }
       @media screen and (max-width: 550px){
         width: 85%;
-        padding: 0 3vw 0 3vw;
-        height: 80vw;
+        padding: 0 5vw 0 5vw;
+        height: 60vw;
         h3{
           font-size: 14px;
         }
@@ -577,11 +642,34 @@ h3 + p{
           font-size: 12px;
         }
       }
+      @media screen and (max-width: 460px){
+        height: 80vw;
+      }
       @media screen and (max-width: 350px){
         height: 100vw;
       }
     }
   }
+  .dots__item{
+    display: inline-block;
+    margin-top: 80px;
+    width: 10px;
+    height: 10px;
+    border-radius: 3px;
+    background-color: #d0d0d0;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+    &:hover{
+      transform: scale(1.3);
+      background: #77efe5;
+    }
+    @media screen and (max-width: 600px) {
+      width: 20px;
+      height: 20px;
+      margin: 80px 5px 0 5px;
+    }
+  }
+
 }
 
 .partners{
